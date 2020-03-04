@@ -11,23 +11,22 @@ django est basé sur le MVT qui est _model view template_ et le respect du MVT
 ## mise en marche de django 
 
 **créé un dossier**
-**dans le dossier créé le venv avec la commande _python -m venv venv_**
+**dans le dossier créé le venv avec la commande `python -m venv venv`**
+** activé le venv avec la commande `source venv/bin/venv`**
 
-**activé le venv avec la commande _source venv/bin/venv_**
+**on installe django avec la commande `pip install django == 'version'`** 
 
-**on installe django avec la commande _pip install django == 'version '_**
+**créé avec la commande `django-admin startprojet nom de post`**
 
-**créé avec la commande _django-admin startprojet nom de post_**
+**on rentre dans le projet avec la commande `cd\nomDuProjet`**
 
-**on rentre dans le projet avec la commande _cd\nomDuProjet_**
-
-**on lance avec  la commande _python manage.Py runserver_**
+**on lance avec  la commande `python manage.Py runserver`**
 
 **coupe le lancement avec crl+c**
 
-**pourquoi intégré _python manage.Py migrate_**
+**pourquoi intégré `python manage.Py migrate`**
 
-**s'enregistrer en t'en que super utilisateurs la commande _python manage.py createsuperuser_**
+**s'enregistrer en t'en que super utilisateurs la commande ``python manage.py createsuperuser``**
 
-**on lance la commande _python manage.py runserver _pour avoir lancé le serveur et avoir accès à à la partie admin**
+**on lance la commande `python manage.py runserver`pour avoir lancé le serveur et avoir accès à à la partie admin**
 
