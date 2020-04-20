@@ -34,8 +34,8 @@ django est basé sur le MVT qui est _model view template_ et le respect du MVT
 
 
 
-## Django  
- la liste urlpatternsqui permet de définir les associations entre URL et vues 
+## Django url 
+ la liste urlpatternsqui permet de définir les associations entre URL et vues
 
 Pour passer des arguments dans une URL, il faut capturer ces arguments directement depuis l’écriture de nos URL
 
