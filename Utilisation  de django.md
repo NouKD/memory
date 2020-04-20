@@ -31,3 +31,11 @@ django est basé sur le MVT qui est _model view template_ et le respect du MVT
 
 **on lance la commande `python manage.py runserver`pour avoir lancé le serveur et avoir accès à à la partie admin**
 
+
+
+
+## Django  
+ la liste urlpatternsqui permet de définir les associations entre URL et vues 
+
+Pour passer des arguments dans une URL, il faut capturer ces arguments directement depuis l’écriture de nos URL
+
