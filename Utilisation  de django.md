@@ -35,18 +35,37 @@ django est basé sur le MVT qui est _model view template_ et le respect du MVT
 
 
 ## Django url 
- la liste urlpatternsqui permet de définir les associations entre URL et vues
+ la liste `urlpatterns` qui permet de définir les associations entre URL et vues
 
 Pour passer des arguments dans une URL, il faut capturer ces arguments directement depuis l’écriture de nos URL
 
+**la fonction qui permet de générer le code**
+
+`import random
+    import string
+
+    def generer(nb_caracteres):
+        caracteres = string.ascii_letters + string.digits
+        aleatoire = [random.choice(caracteres) for _ in range(nb_caracteres)]
+        
+        return ''.join(aleatoire)`  
+
 ## formulaire
 
-Un formulaire est décrit par une classe héritant de django.forms.Form, où chaque attribut est un champ du formulaire défini par le type des données attendues.  
+Un formulaire est décrit par une classe héritant de `django.forms.Form`, où chaque attribut est un champ du formulaire défini par le type des données attendues.  
 
-Chaque classe de django.forms  permet d’affiner les données attendues : taille maximale du contenu du champ, champ obligatoire ou optionnel, valeur par défaut…
+Chaque classe de `django.forms`  permet d’affiner les données attendues : taille maximale du contenu du champ, champ obligatoire ou optionnel, valeur par défaut…
 
-Il est possible de récupérer un objet Form  après la validation du formulaire et de vérifier si les données envoyées sont valides, via form.is_valid().
+Il est possible de récupérer un objet `Form` après la validation du formulaire et de vérifier si les données envoyées sont valides, via `form.is_valid()`.
 
-La validation est personnalisable, grâce à la réécriture des méthodes clean_NOM_DU_CHAMP()  et clean().
+La validation est personnalisable, grâce à la réécriture des méthodes `clean_NOM_DU_CHAMP()`  et `clean()`.
 
-Pour moins de redondances, la création de formulaires à partir de modèles existants se fait en héritant de la classe ModelForm, à partir de laquelle nous pouvons modifier les champs éditables et leurs comportements.
+`form.save(commit=False)`  qui permet de ne pas sauvegarder directement l’article dans la base de données
+
+Pour moins de redondances, la création de formulaires à partir de modèles existants se fait en héritant de la classe `ModelForm`, à partir de laquelle nous pouvons modifier les champs éditables et leurs comportements.
+
+## La gestion des fichiers
+
+Le stockage d’une image dans un objet en base se fait via un champ `models.ImageField`. Le stockage d’un fichier quelconque est similaire, avec `models.FileField`.
+
+Les fichiers uploadés seront stockés dans le répertoire fourni par **MEDIA_ROOT**  dans votre *settings.py*.
