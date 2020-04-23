@@ -39,3 +39,14 @@ django est basé sur le MVT qui est _model view template_ et le respect du MVT
 
 Pour passer des arguments dans une URL, il faut capturer ces arguments directement depuis l’écriture de nos URL
 
+## formulaire
+
+Un formulaire est décrit par une classe héritant de django.forms.Form, où chaque attribut est un champ du formulaire défini par le type des données attendues.  
+
+Chaque classe de django.forms  permet d’affiner les données attendues : taille maximale du contenu du champ, champ obligatoire ou optionnel, valeur par défaut…
+
+Il est possible de récupérer un objet Form  après la validation du formulaire et de vérifier si les données envoyées sont valides, via form.is_valid().
+
+La validation est personnalisable, grâce à la réécriture des méthodes clean_NOM_DU_CHAMP()  et clean().
+
+Pour moins de redondances, la création de formulaires à partir de modèles existants se fait en héritant de la classe ModelForm, à partir de laquelle nous pouvons modifier les champs éditables et leurs comportements.
