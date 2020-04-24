@@ -4,7 +4,7 @@
 django est le framework Web pourquoi ddes perfectionniste sous pression
 django est basé sur le MVT qui est _model view template_ et le respect sa structure 
 
-**django à une ORM**
+**django à une ORM pour « `object-relationnal mapping` »**
 
 **django à également ces parckag**
 
