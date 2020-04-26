@@ -39,16 +39,19 @@ django est basé sur le MVT qui est _model view template_ et le respect sa struc
 
 Pour passer des arguments dans une URL, il faut capturer ces arguments directement depuis l’écriture de nos URL
 
-**la fonction qui permet de générer le code**
+### la fonction qui permet de générer le code
+   
+`` bash
 
-`import random
-    import string
+    import random
+        import string
 
-    def generer(nb_caracteres):
-        caracteres = string.ascii_letters + string.digits
-        aleatoire = [random.choice(caracteres) for _ in range(nb_caracteres)]
-        
-        return ''.join(aleatoire)`  
+        def generer(nb_caracteres):
+            caracteres = string.ascii_letters + string.digits
+            aleatoire = [random.choice(caracteres) for _ in range(nb_caracteres)]
+            
+            return ''.join(aleatoire)
+
 
 ## formulaire
 
@@ -69,3 +72,20 @@ Pour moins de redondances, la création de formulaires à partir de modèles exi
 Le stockage d’une image dans un objet en base se fait via un champ `models.ImageField`. Le stockage d’un fichier quelconque est similaire, avec `models.FileField`.
 
 Les fichiers uploadés seront stockés dans le répertoire fourni par **MEDIA_ROOT**  dans votre *settings.py*.
+
+## Models
+**Cherche dans une base de données les items correspondant a une réquête**
+**renvoie une reponce intélligible par le reste du programe**
+**il s'apuit sur un ORM**
+## schemat d'un ORM
+réquête python **->** réquête SQL **->**intérrogation de la base de données **->**reponse SQL **->** reponse python.  
+## la vue
+**reçoit une requête HTTP**
+**renvoie une reponse intelligente par le navigateur**
+**.** Si la requête a besoin d'une information de la base de données, la vue fera appel au modele pour interroger la base
+**.** Si la vue  a besoin un template, elle fera appel au template pour génerer la réponse
+## Different type de views
+
+## schemat MVT (protocol HTTP)
+ requêt HTTP **->** URL.py **->** views.py **->** ORM **->** views **->** gabarit **->** HTTP
+
