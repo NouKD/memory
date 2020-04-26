@@ -17,7 +17,8 @@ django est basé sur le MVT qui est _model view template_ et le respect sa struc
 
 **on installe django avec la commande `pip install django == 'version'`**
 
-**créé avec la commande `django-admin startprojet nom de post`**
+**créé avec la commande `django-admin startprojet nom du projet`**
+**créé une application django avec `django-admin startapp`**
 
 **on rentre dans le projet avec la commande `cd\nomDuProjet`**
 
@@ -25,19 +26,22 @@ django est basé sur le MVT qui est _model view template_ et le respect sa struc
 
 **coupe le lancement avec crl+c**
 
-**pourquoi intégré `python manage.Py migrate`**
+**pour intégré `python manage.Py migrate`** 
+**génerer une une nouvelle migration avec `manage.py makemigration`**
 
 **s'enregistrer en t'en que super utilisateurs la commande ``python manage.py createsuperuser``**
 
 **on lance la commande `python manage.py runserver`pour avoir lancé le serveur et avoir accès à à la partie admin**
 
-
-
+### trois maniere de  transmetre des information 
+A l'interieure de l'URL
+A l'intérieure de la requêt Get (parametre)
+Dans le corps d'une réquête Post
 
 ## Django url 
- la liste `urlpatterns` qui permet de définir les associations entre URL et vues
+**.**la liste `urlpatterns` qui permet de définir les associations entre URL et vues
 
-Pour passer des arguments dans une URL, il faut capturer ces arguments directement depuis l’écriture de nos URL
+**.**Pour passer des arguments dans une URL, il faut capturer ces arguments directement depuis l’écriture de nos URL
 
 ### la fonction qui permet de générer le code
    
