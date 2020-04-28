@@ -45,7 +45,6 @@ Dans le corps d'une réquête Post
 
 ### la fonction qui permet de générer le code
    
-`` bash
 
     import random
         import string
@@ -56,6 +55,32 @@ Dans le corps d'une réquête Post
             
             return ''.join(aleatoire)
 
+## templates
+    Il est possible de factoriser des blocs HTML (comme le début et la fin d’une page) via l’utilisation des tags {% block %}  et {% extends %}
+
+    L’ajout de fichiers statiques dans notre template (images, CSS, JavaScript) peut se faire via l’utilisation du tag {% static %}
+
+    Les templates sont écrits dans un mini-langage de programmation propre à Django qui possède des expressions et des structures de contrôle basiques (if/else, boucle for, etc.) Appeler tag
+
+        def tpl(request, sexe):
+            html = "Bonjour "
+            if sexe == "Femme":
+                html += "Madame"
+            else:
+                html += "Monsieur"
+            html += " !"
+            return HttpResponse(html)
+    
+    il existe une troisième directive qui peut être associée au {% for %}, il s’agit de {% empty %}. Elle permet d’afficher un message par défaut si la liste parcourue est vide
+
+    Les filtres permettent de modifier l’affichage en fonction d’une variable, sans passer par la vue
+    `{{ texte|truncatewords:80 }}`
+    il existe des dizaines de filtres par défaut :  date, safe, length, etc.
+      
+**NB**
+    la manipulation de données doit être faite au  maximum dans les vues    
+**liaison template et views**
+    user<=>serveur<=>controleur<=>views<=>(model ou template)
 
 ## formulaire
 
