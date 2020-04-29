@@ -103,8 +103,10 @@ Le stockage d’une image dans un objet en base se fait via un champ `models.Ima
 Les fichiers uploadés seront stockés dans le répertoire fourni par **MEDIA_ROOT**  dans votre *settings.py*.
 
 ## Models
+Sont des interfaces permettant plus simplement d’accéder à des données dans une base de données et de les mettre à jour
 **Cherche dans une base de données les items correspondant a une réquête**
 **renvoie une reponce intélligible par le reste du programe**
+**Pour que Django crée la table SQL associée au modèle, il faut lancer la commande `makemigrations` via l’utilitaire `manage.py`**
 **il s'apuit sur un ORM**
 ## schemat d'un ORM
 réquête python **->** réquête SQL **->**intérrogation de la base de données **->**reponse SQL **->** reponse python.  
