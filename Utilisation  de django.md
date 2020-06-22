@@ -120,3 +120,12 @@ réquête python **->** réquête SQL **->**intérrogation de la base de donnée
 ## schemat MVT (protocol HTTP)
  requêt HTTP **->** URL.py **->** views.py **->** ORM **->** views **->** gabarit **->** HTTP
 
+## requet orm
+
+    article_recent = models.Article.objects.all().order_by('-date_add')[:3] # récupération des trois articles les plus récente
+    article_vue = models.Article.objects.order_by('-vue')[:3] # récupération des trois articles les plus vue
+    categorie = models.Categorie.objects.filter(status=True) # récuperation des categorie avec status True
+    article_v = models.Article.objects.exclude(video=None) # récupération des articles ayant des vidéo
+    article_r = models.Article.objects.order_by('-date_add')[:1]
+    site_info = about_model.SiteInfo.objects.filter(status=True)[:1].get() # permet de recuperer les infos
+    print(request.user)
