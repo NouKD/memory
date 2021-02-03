@@ -81,7 +81,10 @@ Dans le corps d'une réquête Post
     la manipulation de données doit être faite au  maximum dans les vues    
 **liaison template et views**
     user<=>serveur<=>controleur<=>views<=>(model ou template)
+    
+**code de pagination**
 
+`https://simpleisbetterthancomplex.com/tutorial/2016/08/03/how-to-paginate-with-django.html`
 ## formulaire
 
 Un formulaire est décrit par une classe héritant de `django.forms.Form`, où chaque attribut est un champ du formulaire défini par le type des données attendues.  
