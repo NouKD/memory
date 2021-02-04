@@ -8,6 +8,13 @@ django est basé sur le MVT qui est _model view template_ et le respect sa struc
 
 **django à également ces parckag**
 
+https://simpleisbetterthancomplex.com/tutorial/2017/08/01/how-to-setup-amazon-s3-in-a-django-project.html
+
+
+https://django-grappelli.readthedocs.io/en/latest/quickstart.html
+
+https://django-allauth.readthedocs.io/en/latest/overview.html
+
 ## mise en marche de django 
 
 **créé un dossier**
